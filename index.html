@@ -178,10 +178,10 @@
         // Cores Neon
         const colors = [
             '#FF0055', // Rosa Choque
-            '#00FFFF', // Ciano
+            '#00FFFF', // vermelho
             '#B400FF', // Roxo
-            '#FFFF00', // Amarelo
-            '#00FF00'  // Verde
+            '#FFFF00', // rosa claro
+            '#00FF00'  // azul
         ];
 
         // Objetos do Jogo
@@ -197,13 +197,13 @@
 
         const paddle = {
             height: 15,
-            width: 120,
-            x: (canvas.width - 120) / 2,
+            width: 90,
+            x: (canvas.width - 90) / 2,
             y: canvas.height - 20,
             color: '#ffffff',
             glow: '#FF00FF',
             speed: 8,
-            dx: 0
+            dx: 5
         };
 
         // Configuração dos Tijolos
@@ -364,13 +364,13 @@
             // Movimento da barra via teclado
             if (rightPressed && paddle.x < canvas.width - paddle.width) {
                 paddle.x += paddle.speed;
-            } else if (leftPressed && paddle.x > 0) {
+            } else if (leftPressed && paddle.x > 5) {
                 paddle.x -= paddle.speed;
             }
 
             // Move a bola
-            ball.x += ball.dx;
-            ball.y += ball.dy;
+            ball.x += ball.dx;5
+            ball.y += ball.dy;5
 
             animationId = requestAnimationFrame(draw);
         }
